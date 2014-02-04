@@ -14,7 +14,7 @@
 		<div class="leftMain">
 		<!-- Tab panes -->
 		<div class="tab-content">
-			<div class="tab-pane fade in active" id="overview"><h1>WELCOME ADMIN!</h1></div>
+			<div class="tab-pane fade in active" id="overview"><h1>WELCOME ADMIN!<br><br><br><br><br><br><br><br></h1></div>
 			<!--Reserved -->
 			<div class="tab-pane fade" id="reserved">
 			<h1>Reserved Books</h1>
@@ -124,9 +124,66 @@
               </tr>
 			</table>			
 			</div>
-			<div class="tab-pane fade" id="view">...e</div>
-
 			
+			<div class="tab-pane fade" id="view">
+			<table class="table table-hover" id="reserved" summary="Results" border="1" cellspacing="5" cellpadding="5" align = "center">
+	 <thead>
+              <tr data-toggle="modal" data-id="1" data-target="#editMaterial">
+                <th style="width:100px;" abbr="lmID" scope="col" title="Libary Material ID">Library Material ID</th>
+                <th style="width:100px;" abbr="CourseClassification" scope="col" title="Course Classification">Course Classification</th>
+                <th abbr="Type" scope="col" title="Type">Type</th>
+                <th abbr="Title" scope="col" title="Title">Title</th>
+                <th abbr="Author" scope="col" title="Author">Author</th>
+                <th style="width:100px;" abbr="YrofPub" scope="col" title="Year of Publication">Year of Publication</th>
+                <th abbr="Edition" scope="col" title="Edition">Edition</th>
+              </tr>
+            </thead>
+              <tr data-toggle="modal" data-id="1" data-target="#editMaterial">
+                <td>L.Mat. ID 1</td>
+                <td>CMSC1</td>
+                <td>Type 1</td>
+                <td>Title 1</td>
+                <td>Author 1</td>
+                <td>0001</td>
+				<td>ed 1</td>
+              </tr >
+              <tr data-toggle="modal" data-id="2" data-target="#editMaterial">
+                <td>L.Mat. ID 2</td>
+                <td>CMSC2</td>
+                <td>Type 2</td>
+                <td>Title 2</td>
+                <td>Author 2</td>
+                <td>0002</td>
+				<td>ed 1</td>
+              </tr>
+              <tr data-toggle="modal" data-id="3" data-target="#editMaterial">
+                <td>L.Mat. ID 3</td>
+                <td>CMSC2</td>
+                <td>Type 3</td>
+                <td>Title 3</td>
+                <td>Author 3</td>
+                <td>0003</td>
+				<td>ed 1</td>
+              </tr>
+			</table>
+			</div>
+			
+			<!--Will show when editing materials -->
+			<div class="modal fade" id="editMaterial" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h3 class="modal-title" id="myModalLabel">Edit Material</h3>
+				  </div>
+				  <div id="details" class="modal-body"></div>
+				  <div class="modal-footer">
+					<button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+				  </div>
+				 </div>
+				</div>
+			</div>
+
 			<div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
 			  <div class="modal-dialog">
 				<div class="modal-content">
@@ -204,16 +261,5 @@
 			</div>			
 		</div>
 		</div>
-
-	<div class="container marketing">
-      <!-- FOOTER -->
-	   <hr class="featurette-divider">
-      <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>?2013 Company, Inc. ?<a href="#">Privacy</a> ?<a href="#">Terms</a> | <a href="#">About</a> | <a href="#">Contact</a></p>
-      </footer>
-
-    </div><!-- /.container -->
-
-
+	</div>
 <?php include 'admin_footer.php'; ?>
